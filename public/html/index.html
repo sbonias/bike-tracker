@@ -13,6 +13,85 @@
     <style></style>
   </head>
   <body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        Bike Activity Tracker
+      </a>
+    </nav>
+    <main class="container mt-4">
+      <!-- activity form -->
+      <section id="activity-form"></section>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link btn-block text-left"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Track a Bike Ride
+              </button>
+            </h2>
+          </div>
+
+          <div
+            id="collapseOne"
+            class="collapse show"
+            aria-labelledby="headingOne"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body">
+                <!-- Form -->
+                <form>
+                    <div class="form-group">
+                      <label for="mileage">Mileage</label>
+                      <input type="number" class="form-control" id="exampleInputMileage1" aria-describedby="mileageHelp">
+                      <small id="mileageHelp" class="form-text text-muted">Enter the length of your ride in miles, including up to 1 decimal point.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  <form>
+                    <div class="form-group">
+                      <label for="duration">Duration</label>
+                      <input type="number" class="form-control" id="exampleInputDuration1" aria-describedby="durationHelp">
+                      <small id="durationHelp" class="form-text text-muted">Enter the length of your ride in minutes, use the closest whole number.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  <form>
+                    <div class="form-group">
+                      <label for="date">Date of Ride</label>
+                      <input type="date" class="form-control" id="exampleInputDate1" aria-describedby="dateHelp">
+                      <small id="dateHelp" class="form-text text-muted">Choose the date of this ride.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <!-- graph for mileage -->
+        <section id="mileage-graph">
+        <div class="jumbotron">
+            <div id="mileage-highchart"></div>
+        </section>
+        <br>
+        <!-- graph for duration -->
+        <section id="duration-graph">
+        <div class="jumbotron">
+            <div id="duration-highchart"></div>
+        </section>
+    </main>
+
+    <!-- Including highcharts library -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- Bootstrap JS library -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
